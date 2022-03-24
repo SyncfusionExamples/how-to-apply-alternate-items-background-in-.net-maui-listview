@@ -47,8 +47,8 @@
                                     <RowDefinition Height="25" />
                                     <RowDefinition Height="25" />
                                 </Grid.RowDefinitions>
-                                <Label FontFamily="Roboto"  LineBreakMode="NoWrap" Grid.Row="0" TextColor="#474747" Text="{Binding ContactName}" />
-                                <Label FontFamily="Roboto"  Grid.Row="1" Grid.Column="0" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding ContactNumber}" />
+                                <Label FontFamily="RobotoMedium"  LineBreakMode="NoWrap" Grid.Row="0" TextColor="#474747" Text="{Binding ContactName}" />
+                                <Label FontFamily="RobotoMedium"  Grid.Row="1" Grid.Column="0" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding ContactNumber}" />
                             </Grid>
                         </Grid>
                     </DataTemplate>
