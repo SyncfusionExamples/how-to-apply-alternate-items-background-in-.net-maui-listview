@@ -20,40 +20,38 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout>
-            <syncfusion:SfListView x:Name="listView"
+        <syncfusion:SfListView x:Name="listView"
                         ItemSpacing="1" ItemSize="60"
                         ItemsSource="{Binding ContactsInfo}">
-                <syncfusion:SfListView.ItemTemplate >
-                    <DataTemplate>
-                        <Grid x:Name="grid">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+            <syncfusion:SfListView.ItemTemplate >
+                <DataTemplate>
+                    <Grid x:Name="grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                            <Grid.Triggers>
-                                <DataTrigger TargetType="Grid" Binding="{Binding Source={x:Reference grid}, Path=BindingContext.IsSelected}" Value="False">
-                                    <Setter Property="BackgroundColor" Value="{Binding ., Converter={StaticResource IndexToColorConverter}, ConverterParameter={x:Reference listView}}" />
-                                </DataTrigger>
-                                <DataTrigger TargetType="Grid" Binding="{Binding Source={x:Reference grid}, Path=BindingContext.IsSelected}" Value="True">
-                                    <Setter Property="BackgroundColor" Value="PaleVioletRed" />
-                                </DataTrigger>
-                            </Grid.Triggers>
-                            
-                            <Image Source="{Binding ContactImage}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50"/>
-                            <Grid Grid.Column="1" RowSpacing="1"  VerticalOptions="Center">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="25" />
-                                    <RowDefinition Height="25" />
-                                </Grid.RowDefinitions>
-                                <Label FontFamily="RobotoMedium"  LineBreakMode="NoWrap" Grid.Row="0" TextColor="#474747" Text="{Binding ContactName}" />
-                                <Label FontFamily="RobotoMedium"  Grid.Row="1" Grid.Column="0" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding ContactNumber}" />
-                            </Grid>
+                        <Grid.Triggers>
+                            <DataTrigger TargetType="Grid" Binding="{Binding Source={x:Reference grid}, Path=BindingContext.IsSelected}" Value="False">
+                                <Setter Property="BackgroundColor" Value="{Binding ., Converter={StaticResource IndexToColorConverter}, ConverterParameter={x:Reference listView}}" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Grid" Binding="{Binding Source={x:Reference grid}, Path=BindingContext.IsSelected}" Value="True">
+                                <Setter Property="BackgroundColor" Value="PaleVioletRed" />
+                            </DataTrigger>
+                        </Grid.Triggers>
+
+                        <Image Source="{Binding ContactImage}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" WidthRequest="50"/>
+                        <Grid Grid.Column="1" RowSpacing="1"  VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
+                            </Grid.RowDefinitions>
+                            <Label FontFamily="RobotoMedium"  LineBreakMode="NoWrap" Grid.Row="0" TextColor="#474747" Text="{Binding ContactName}" />
+                            <Label FontFamily="RobotoMedium"  Grid.Row="1" Grid.Column="0" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding ContactNumber}" />
                         </Grid>
-                    </DataTemplate>
-                </syncfusion:SfListView.ItemTemplate>
-            </syncfusion:SfListView>
-        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
     </ContentPage.Content>
 </ContentPage>

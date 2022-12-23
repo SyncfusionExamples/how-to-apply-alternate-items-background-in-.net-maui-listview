@@ -1,5 +1,5 @@
 ﻿namespace ListViewMaui;
-using Syncfusion.Maui.ListView.Hosting;
+using Syncfusion.Maui.Core.Hosting;
 
 public static class MauiProgram
 {
@@ -14,7 +14,7 @@ public static class MauiProgram
 				fonts.AddFont("Roboto-Medium.ttf", "RobotoMedium");
 				fonts.AddFont("Roboto-Regular.ttf", "RobotoRegular");
 			});
-		builder.ConfigureSyncfusionListView();
+		builder.ConfigureSyncfusionCore();
 		return builder.Build();
 	}
 }

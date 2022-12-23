@@ -46,12 +46,6 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
-		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
-	</ItemGroup>
-
 	<ItemGroup>
 	  <None Remove="Images\Image0.png" />
 	  <None Remove="Images\Image1.png" />
@@ -119,7 +113,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="19.4.56-preview" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.38" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
